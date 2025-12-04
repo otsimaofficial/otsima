@@ -42,7 +42,7 @@ const Hero = () => {
             title="View My CV"
             containerClass="bg-primary text-white hover:scale-105 cursor-pointer hover:bg-blue-900 "
           />
-          <a href="malto:emmanuelotsimaogbu@gmail.com" target="_blank">
+          <a href="mailto:emmanuelotsimaogbu@gmail.com" target="_blank">
             <Button
               title="Contact Me"
               containerClass="hover:scale-105 cursor-pointer hover:bg-primary hover:text-white "

@@ -56,7 +56,7 @@ const Navbar = () => {
               </a>
             ))}
           </nav>
-          <a href="malto:emmanuelotsimaogbu@gmail.com" target="_blank">
+          <a href="mailto:emmanuelotsimaogbu@gmail.com" target="_blank">
             <Button
               title="Contact Me"
               containerClass="hover:bg-primary hover:text-white hover:cursor-pointer hover:scale-105"
