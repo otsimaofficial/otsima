@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { skillIcons } from "../../constants";
 
 const Skills = () => {
   useGSAP(() => {
@@ -22,6 +23,13 @@ const Skills = () => {
       { opacity: 0, y: 40, stagger: 0.3, duration: 0.8 },
       "-=0.5"
     );
+
+    gsap.to(".skill-icons", {
+      x: "-50%",
+      duration: 20,
+      ease: "none",
+      repeat: -1,
+    });
   }, []);
 
   return (
@@ -54,6 +62,18 @@ const Skills = () => {
             plan social media <br />
             marketing campaigns | Microsoft Office
           </p>
+        </div>
+        <div className="overflow-hidden">
+          <div className="skill-icons flex gap-8 items-center pt-2">
+            {[...skillIcons, ...skillIcons].map((skill, index) => (
+              <img
+                key={index}
+                src={skill.icon}
+                alt={`Skill icon ${index + 1}`}
+                className="w-10 h-10"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

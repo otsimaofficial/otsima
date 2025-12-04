@@ -56,12 +56,12 @@ const Navbar = () => {
               </a>
             ))}
           </nav>
-          <div id="btn">
+          <a href="malto:emmanuelotsimaogbu@gmail.com" target="_blank">
             <Button
               title="Contact Me"
               containerClass="hover:bg-primary hover:text-white hover:cursor-pointer hover:scale-105"
             />
-          </div>
+          </a>
         </div>
         <div className=" md:hidden flex justify-end pr-6 bg-tetiary ">
           <CgMenuRight

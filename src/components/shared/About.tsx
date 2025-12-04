@@ -1,9 +1,20 @@
-import { FaGithub, FaTelegram, FaLinkedin, FaDiscord  } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaTelegram,
+  FaLinkedin,
+  FaDiscord,
+  FaChevronDown,
+  FaChevronUp,
+} from "react-icons/fa";
+import { FaXTwitter, FaMedium } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useState } from "react";
 
 const About = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -39,29 +50,110 @@ const About = () => {
         <div className="about-text">
           <h2 className="text-primary text-3xl font-bold ">About Me</h2>
           <p className="text-secondary pt-2 text-xs md:text-lg">
-            Emmanuel Ogbu is a Biomedical Engineering graduate passionate about{" "}
-            <br />
-            improving healthcare delivery through technology. His interests span{" "}
-            <br />
-            Clinical & Health Informatics, Electronic Health Records, AI-driven{" "}
-            <br />
-            predictive medicine, and blockchain applications for secure,
-            transparent <br />
-            health data systems. <br />
-            He combines engineering fundamentals with software development,{" "}
-            <br />
-            system design, and hands-on hospital experience to build solutions
-            that <br />
-            strengthen health systems in emerging economies.
+            Hello, I’m Emmanuel Otsima Ogbu, a proudly Nigerian Christian and a{" "}
+            <br className="hidden md:block" />
+            Biomedical Engineering graduate from the University of Ilorin, Kwara{" "}
+            <br className="hidden md:block" />
+            State, Nigeria. I am deeply passionate about advancing healthcare
+            delivery <br className="hidden md:block" /> through the power of
+            technology.
           </p>
+          {!isExpanded && (
+            <button
+              onClick={() => setIsExpanded(true)}
+              className="flex gap-3 items-center text-primary md:hidden"
+            >
+              <p> See More</p> <FaChevronDown />
+            </button>
+          )}
+          <div className="hidden md:block">
+            <p className="text-secondary pt-2 text-xs md:text-lg">
+              My interests lie at the intersection of clinical and health
+              informatics, <br className="hidden md:block" /> electronic health
+              records (EHR), artificial intelligence (AI) for medicine, and{" "}
+              <br className="hidden md:block" /> blockchain applications for
+              health data systems. I believe the future of{" "}
+              <br className="hidden md:block" /> healthcare depends on secure
+              data, intelligent systems, and technologies{" "}
+              <br className="hidden md:block" /> that improve efficiency,
+              accuracy, and patient outcomes.
+            </p>
+            <p className="text-secondary pt-2 text-xs md:text-lg">
+              I consider myself an impact-driven solution provider, inspired by
+              the <br className="hidden md:block" /> mission of adding value to
+              humanity. With a multidisciplinary background{" "}
+              <br className="hidden md:block" /> that blends engineering
+              principles, system design, data science, software{" "}
+              <br className="hidden md:block" /> and web development, digital
+              marketing, content creation and hands-on <br /> hospital
+              experience.
+            </p>
+            <p className="text-secondary pt-2 text-xs md:text-lg">
+              Let’s connect if you're building bold ideas and need a strategic
+              partner <br className="hidden md:block" /> who can engineer them
+              into reality.
+            </p>
+          </div>
+          {isExpanded && (
+            <div className="md:hidden">
+              <p className="text-secondary pt-2 text-xs md:text-lg">
+                My interests lie at the intersection of clinical and health
+                informatics, <br className="hidden md:block" /> electronic
+                health records (EHR), artificial intelligence (AI) for medicine,
+                and <br className="hidden md:block" /> blockchain applications
+                for health data systems. I believe the future of{" "}
+                <br className="hidden md:block" /> healthcare depends on secure
+                data, intelligent systems, and technologies{" "}
+                <br className="hidden md:block" /> that improve efficiency,
+                accuracy, and patient outcomes.
+              </p>
+              <p className="text-secondary pt-2 text-xs md:text-lg">
+                I consider myself an impact-driven solution provider, inspired
+                by the <br className="hidden md:block" /> mission of adding
+                value to humanity. With a multidisciplinary background{" "}
+                <br className="hidden md:block" /> that blends engineering
+                principles, system design, data science, software{" "}
+                <br className="hidden md:block" /> and web development, digital
+                marketing, content creation and hands-on <br /> hospital
+                experience.
+              </p>
+              <p className="text-secondary pt-2 text-xs md:text-lg">
+                Let’s connect if you're building bold ideas and need a strategic
+                partner <br className="hidden md:block" /> who can engineer them
+                into reality.
+              </p>
+              <button
+                onClick={() => setIsExpanded(false)}
+                className="flex gap-3 items-center text-primary"
+              >
+                <p> See Less</p> <FaChevronUp />
+              </button>
+            </div>
+          )}
         </div>
       </div>
       <div className="about-social flex justify-center gap-8 mt-8">
+        <Link to="https://www.linkedin.com/in/otsimaofficial/" target="_blank">
           <FaLinkedin className="text-primary size-6" />
+        </Link>
+        <Link
+          to="https://discordapp.com/users/1130232660883681280"
+          target="_blank"
+        >
           <FaDiscord className="text-primary size-6" />
-        <FaXTwitter className="text-primary  size-6" />
-        <FaGithub className="text-primary size-6" />
-        <FaTelegram className="text-primary  size-6" />
+        </Link>
+        <Link to="https://x.com/Otsimaofficial" target="_blank">
+          <FaXTwitter className="text-primary  size-6" />
+        </Link>
+        <Link to="https://github.com/otsimaofficial" target="_blank">
+          <FaGithub className="text-primary size-6" />
+        </Link>
+        <Link to="https://t.me/otsimaofficial" target="_blank">
+          <FaTelegram className="text-primary  size-6" />
+        </Link>
+        <Link to="https://otsimaofficial.medium.com/" target="_blank">
+          <FaMedium className="text-primary  size-6" />
+        </Link>
       </div>
     </section>
   );

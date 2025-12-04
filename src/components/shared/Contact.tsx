@@ -1,8 +1,18 @@
-import Button from "../ui/Button.tsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useForm, ValidationError } from "@formspree/react";
+import { useRef, useEffect } from "react";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("mldqldzg");
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      formRef.current?.reset();
+    }
+  }, [state.succeeded]);
+
   useGSAP(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -35,7 +45,12 @@ const Contact = () => {
           Let’s collaborate! Reach out if you would like to work on a project.
         </p>
       </div>
-      <form className="space-y-6">
+      {state.succeeded && (
+        <p className="text-primary text-center font-bold">
+          Thanks for your message!
+        </p>
+      )}
+      <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
         <div className="form-field">
           <label htmlFor="name">Name</label> <br />
           <input
@@ -43,6 +58,7 @@ const Contact = () => {
             name="name"
             className="bg-white rounded-lg w-full p-4 mt-2"
           />
+          <ValidationError prefix="Name" field="name" errors={state.errors} />
         </div>
         <div className="form-field">
           <label htmlFor="email">Email Address</label> <br />
@@ -51,6 +67,7 @@ const Contact = () => {
             name="email"
             className="bg-white rounded-lg w-full p-4 mt-2"
           />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
         <div className="form-field">
           <label htmlFor="Message">Message</label> <br />
@@ -58,13 +75,21 @@ const Contact = () => {
             name="message"
             className="bg-white rounded-lg w-full p-4 mt-2 h-50 "
           />
+          <ValidationError
+            prefix="Message"
+            field="Message"
+            errors={state.errors}
+          />
         </div>
 
         <div className="submit-btn">
-          <Button
-            title="submit"
-            containerClass="bg-primary text-white px-20 w-full md:w-fit cursor-pointer hover:scale-105"
-          />
+          <button
+            type="submit"
+            className="bg-primary text-white px-20 py-4 rounded-lg w-full md:w-fit cursor-pointer hover:scale-105"
+            disabled={state.submitting}
+          >
+            Submit
+          </button>
         </div>
       </form>
     </section>

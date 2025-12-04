@@ -74,19 +74,33 @@ const Experience = () => {
               ))}
             </ul>
             {project.images && project.images.length > 0 && (
-              <div className="grid grid-cols-3 md:grid-cols-6 gap-4 ">
-                {project.images.map((img, imgIndex) => (
-                  <div key={imgIndex}>
+              <>
+                <div className="flex gap-4 overflow-x-auto md:hidden pb-4">
+                  {project.images.map((img, imgIndex) => (
                     <img
+                      key={imgIndex}
                       src={img}
                       alt={`${project.project_title} - snapshot ${
                         imgIndex + 1
                       }`}
-                      className=" object-contain rounded-lg w-full h-full"
+                      className="w-32 h-32 object-contain rounded-lg shrink-0 hover:scale-150 transition-all duration-300"
                     />
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+                <div className="hidden md:grid md:grid-cols-6 gap-4">
+                  {project.images.map((img, imgIndex) => (
+                    <div key={imgIndex}>
+                      <img
+                        src={img}
+                        alt={`${project.project_title} - snapshot ${
+                          imgIndex + 1
+                        }`}
+                        className="object-contain rounded-lg w-full h-full hover:scale-150 transition-all duration-300"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </>
             )}
           </div>
         ))}

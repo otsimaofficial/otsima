@@ -36,7 +36,6 @@ export const certificationLinks = [
 
 export const projectData = [
   {
-    // Using \n for the line break as you requested
     project_title:
       "DESIGN AND FABRICATION OF SOLAR POWERED \n VACCINE REFRIGERATOR STORAGE SYSTEM",
     institution: "University of Ilorin",
@@ -46,8 +45,7 @@ export const projectData = [
       "Applied refrigeration and thermal engineering principles to develop and fabricate a vaccine-grade cooling unit capable of maintaining WHO-recommended temperature ranges.",
       "Developed instrumentation and control systems using sensors and microcontrollers for automated temperature monitoring, data logging, and system regulation",
     ],
-    // Simulating the 4 gray boxes at the bottom
-    images: ["img1", "img2", "img3", "img4"],
+    images: ["/proj1.png", "/proj2.png", "/proj3.png", "/proj4.png"],
   },
 ];
 
@@ -104,4 +102,30 @@ export const experienceData = [
     ],
     images: [],
   },
+];
+
+export const skillIcons = [
+  { icon: "/icons/1.png" },
+  { icon: "/icons/2.png" },
+  { icon: "/icons/3.png" },
+  { icon: "/icons/4.png" },
+  { icon: "/icons/5.png" },
+  { icon: "/icons/6.png" },
+  { icon: "/icons/7.png" },
+  { icon: "/icons/8.png" },
+  { icon: "/icons/9.png" },
+  { icon: "/icons/10.png" },
+  { icon: "/icons/11.png" },
+  { icon: "/icons/12.png" },
+  { icon: "/icons/13.png" },
+  { icon: "/icons/14.png" },
+  { icon: "/icons/15.png" },
+  { icon: "/icons/16.png" },
+];
+
+export const eventPics = [
+  { pic: "/event1.png" },
+  { pic: "/event2.png" },
+  { pic: "/event3.png" },
+  { pic: "/event4.png" },
 ];

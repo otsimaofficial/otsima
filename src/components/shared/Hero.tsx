@@ -1,6 +1,5 @@
 import Button from "../ui/Button.tsx";
 import { useGSAP } from "@gsap/react";
-import { SplitText } from "gsap/all";
 import gsap from "gsap";
 
 const Hero = () => {
@@ -14,11 +13,10 @@ const Hero = () => {
       },
     });
 
-    const titleSplit = new SplitText(".hero-title", { type: "chars" });
-    tl.from(titleSplit.chars, {
+    tl.from(".hero-title", {
       opacity: 0,
-      y: 30,
-      stagger: 0.02,
+      x: -50,
+      duration: 0.8,
       ease: "power2.out",
     })
       .from(".hero-desc", { opacity: 0, y: 20, duration: 0.8 }, "-=0.5")
@@ -44,10 +42,12 @@ const Hero = () => {
             title="View My CV"
             containerClass="bg-primary text-white hover:scale-105 cursor-pointer hover:bg-blue-900 "
           />
-          <Button
-            title="Contact Me"
-            containerClass="hover:scale-105 cursor-pointer hover:bg-primary hover:text-white "
-          />
+          <a href="malto:emmanuelotsimaogbu@gmail.com" target="_blank">
+            <Button
+              title="Contact Me"
+              containerClass="hover:scale-105 cursor-pointer hover:bg-primary hover:text-white "
+            />
+          </a>
         </div>
       </div>
       <img

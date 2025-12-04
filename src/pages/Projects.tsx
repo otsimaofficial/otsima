@@ -72,6 +72,26 @@ const Projects = () => {
                 </li>
               ))}
             </ul>
+            <div className="flex gap-4 overflow-x-auto md:hidden pb-4">
+              {project.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt="Project image"
+                  className="w-32 h-32 object-contain rounded-lg shrink-0 hover:scale-150 transition-all duration-300"
+                />
+              ))}
+            </div>
+            <div className="hidden md:grid md:grid-cols-4 gap-4">
+              {project.images.map((image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt="Project image"
+                  className="w-full h-auto rounded-lg hover:scale-150 transition-all duration-300"
+                />
+              ))}
+            </div>
           </div>
         ))}
       </div>
