@@ -47,7 +47,6 @@ export const projectData = [
     ],
     images: [
       "/proj1.png",
-      "/proj2.jpg",
       "/proj3.jpg",
       "/proj4.jpg",
       "/proj5.jpg",
