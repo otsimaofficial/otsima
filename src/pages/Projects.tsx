@@ -1,6 +1,7 @@
 import { projectData } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useRef, useState } from "react";
 
 const Projects = () => {
   useGSAP(() => {
@@ -72,30 +73,181 @@ const Projects = () => {
                 </li>
               ))}
             </ul>
-            <div className="flex gap-4 overflow-x-auto md:hidden pb-4">
-              {project.images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt="Project image"
-                  className="w-32 h-32 object-contain rounded-lg shrink-0 hover:scale-150 transition-all duration-300"
-                />
-              ))}
-            </div>
-            <div className="hidden md:grid md:grid-cols-4 gap-4">
-              {project.images.map((image, index) => (
-                <img
-                  key={index}
-                  src={image}
-                  alt="Project image"
-                  className="w-full h-auto rounded-lg hover:scale-150 transition-all duration-300"
-                />
-              ))}
-            </div>
+
+            {/* Image Gallery */}
+            {project.images && project.images.length > 0 && (
+              <ImageGallery
+                images={project.images}
+                title={project.project_title}
+              />
+            )}
           </div>
         ))}
       </div>
     </section>
   );
 };
+
+const ImageGallery = ({
+  images,
+  title,
+}: {
+  images: string[];
+  title: string;
+}) => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(images.length > 3);
+
+  const checkScrollPosition = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10);
+    }
+  };
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = direction === "left" ? -270 : 270; // Image width + gap
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth",
+      });
+      setTimeout(checkScrollPosition, 300);
+    }
+  };
+
+  return (
+    <>
+      {/* Mobile View */}
+      <div className="md:hidden relative">
+        {canScrollLeft && (
+          <button
+            onClick={() => scroll("left")}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary/80 hover:bg-primary text-white rounded-full p-2 shadow-lg transition-all duration-300"
+            aria-label="Scroll left"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+        )}
+        <div
+          ref={scrollContainerRef}
+          onScroll={checkScrollPosition}
+          className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {images.map((img, imgIndex) => (
+            <img
+              key={imgIndex}
+              src={img}
+              alt={`${title} - snapshot ${imgIndex + 1}`}
+              className="w-[100px] h-[100px] object-cover rounded-lg shrink-0 hover:scale-105 transition-all duration-300 shadow-md"
+            />
+          ))}
+        </div>
+        {canScrollRight && (
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary/80 hover:bg-primary text-white rounded-full p-2 shadow-lg transition-all duration-300"
+            aria-label="Scroll right"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        )}
+      </div>
+
+      {/* Desktop View */}
+      <div className="hidden md:block relative">
+        {canScrollLeft && (
+          <button
+            onClick={() => scroll("left")}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primary/80 hover:bg-primary text-white rounded-full p-3 shadow-lg transition-all duration-300"
+            aria-label="Scroll left"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+        )}
+        <div
+          ref={scrollContainerRef}
+          onScroll={checkScrollPosition}
+          className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {images.map((img, imgIndex) => (
+            <img
+              key={imgIndex}
+              src={img}
+              alt={`${title} - snapshot ${imgIndex + 1}`}
+              className="w-[250px] h-[250px] object-cover rounded-lg shrink-0 hover:scale-105 transition-all duration-300 shadow-md"
+            />
+          ))}
+        </div>
+        {canScrollRight && (
+          <button
+            onClick={() => scroll("right")}
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primary/80 hover:bg-primary text-white rounded-full p-3 shadow-lg transition-all duration-300"
+            aria-label="Scroll right"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
+        )}
+      </div>
+    </>
+  );
+};
+
 export default Projects;

@@ -23,7 +23,9 @@ const GridSec = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
         <div className="grid-item bg-tetiary max-w-3xl md:h-44 px-9 py-6">
           <h3 className="text-primary text-3xl font-bold">Language Skills</h3>
-          <p className="text-xl text-secondary">Mother tongue(s): English</p>
+          <p className="text-xl text-secondary">
+            Mother tongue(s): English Language
+          </p>
         </div>
         <div className="grid-item bg-tetiary max-w-3xl md:h-[326px] px-9 py-6 space-y-6">
           <h3 className="text-primary text-3xl font-bold">

@@ -45,7 +45,7 @@ const About = () => {
         <img
           src="/about.png"
           alt="AboutImg"
-          className="about-img w-45 h-80 md:w-85 md:h-150"
+          className="about-img w-45 h-80 md:w-85 md:h-150 hidden md:block"
         />
         <div className="about-text">
           <h2 className="text-primary text-3xl font-bold ">About Me</h2>
@@ -130,9 +130,35 @@ const About = () => {
               </button>
             </div>
           )}
+          <div className="about-social md:flex justify-left gap-8 mt-8 hidden">
+            <Link
+              to="https://www.linkedin.com/in/otsimaofficial/"
+              target="_blank"
+            >
+              <FaLinkedin className="text-primary size-6" />
+            </Link>
+            <Link
+              to="https://discordapp.com/users/1130232660883681280"
+              target="_blank"
+            >
+              <FaDiscord className="text-primary size-6" />
+            </Link>
+            <Link to="https://x.com/Otsimaofficial" target="_blank">
+              <FaXTwitter className="text-primary  size-6" />
+            </Link>
+            <Link to="https://github.com/otsimaofficial" target="_blank">
+              <FaGithub className="text-primary size-6" />
+            </Link>
+            <Link to="https://t.me/otsimaofficial" target="_blank">
+              <FaTelegram className="text-primary  size-6" />
+            </Link>
+            <Link to="https://otsimaofficial.medium.com/" target="_blank">
+              <FaMedium className="text-primary  size-6" />
+            </Link>
+          </div>
         </div>
       </div>
-      <div className="about-social flex justify-center gap-8 mt-8">
+      <div className="about-social flex justify-center gap-8 mt-8 md:hidden">
         <Link to="https://www.linkedin.com/in/otsimaofficial/" target="_blank">
           <FaLinkedin className="text-primary size-6" />
         </Link>

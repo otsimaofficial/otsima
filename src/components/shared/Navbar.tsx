@@ -96,13 +96,15 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
-          <div className="mt-4">
-            <Button
-              title="Contact Me"
-              containerClass="bg-white text-primary hover:scale-105"
-              handleClick={() => setIsOpen(false)}
-            />
-          </div>
+          <a href="mailto:emmanuelotsimaogbu@gmail.com" target="_blank">
+            <div className="mt-4">
+              <Button
+                title="Contact Me"
+                containerClass="bg-white text-primary hover:scale-105"
+                handleClick={() => setIsOpen(false)}
+              />
+            </div>
+          </a>
         </nav>
       </div>
     </>
