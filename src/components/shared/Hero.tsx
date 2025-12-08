@@ -38,10 +38,15 @@ const Hero = () => {
           <br className="hidden md:block" /> for secure healthcare data.
         </p>
         <div className="hero-buttons space-x-5 ml-5 md:ml-0">
-          <Button
-            title="View My CV"
-            containerClass="bg-primary text-white hover:scale-105 cursor-pointer hover:bg-blue-900 "
-          />
+          <a
+            href="https://drive.google.com/drive/folders/1OPFDojxjGf-dZ4bi9_3WcCVL7d8Wjkgf?usp=sharing"
+            target="_blank"
+          >
+            <Button
+              title="View My CV"
+              containerClass="bg-primary text-white hover:scale-105 cursor-pointer hover:bg-blue-900 "
+            />
+          </a>
           <a href="mailto:emmanuelotsimaogbu@gmail.com" target="_blank">
             <Button
               title="Contact Me"
