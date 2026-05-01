@@ -4,6 +4,7 @@ export const navLinks = [
   { label: "Certification", link: "/certificates" },
   { label: "Projects", link: "/projects" },
   { label: "Events", link: "/events" },
+  { label: "Blog", link: "/blog" },
 ];
 
 export const certificationLinks = [

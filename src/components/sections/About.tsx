@@ -50,13 +50,11 @@ const About = () => {
         <div className="about-text">
           <h2 className="text-primary text-3xl font-bold ">About Me</h2>
           <p className="text-secondary pt-2 text-xs md:text-lg">
-            Hello, I’m Emmanuel Otsima Ogbu, a proudly Nigerian Christian and a{" "}
+            Hello, I’m Emmanuel Otsima Ogbu — a proudly Nigerian Christian and{" "}
             <br className="hidden md:block" />
-            Biomedical Engineering graduate from the University of Ilorin, Kwara{" "}
+            multidisciplinary engineer building at the intersection of{" "}
             <br className="hidden md:block" />
-            State, Nigeria. I am deeply passionate about advancing healthcare
-            delivery <br className="hidden md:block" /> through the power of
-            technology.
+            Health, Finance, Technology & Media.
           </p>
           {!isExpanded && (
             <button
@@ -68,59 +66,52 @@ const About = () => {
           )}
           <div className="hidden md:block">
             <p className="text-secondary pt-2 text-xs md:text-lg">
-              My interests lie at the intersection of clinical and health
-              informatics, <br className="hidden md:block" /> electronic health
-              records (EHR), artificial intelligence (AI) for medicine, and{" "}
-              <br className="hidden md:block" /> blockchain applications for
-              health data systems. I believe the future of{" "}
-              <br className="hidden md:block" /> healthcare depends on secure
-              data, intelligent systems, and technologies{" "}
-              <br className="hidden md:block" /> that improve efficiency,
-              accuracy, and patient outcomes.
+              I hold a B.Eng in Biomedical Engineering from the University of
+              Ilorin <br className="hidden md:block" /> and I’m currently
+              pursuing an MSc in Financial Engineering at WorldQuant{" "}
+              <br className="hidden md:block" /> University. I’m also a
+              blockchain developer, algorithmic trader, and{" "}
+              <br className="hidden md:block" /> media creator — unified by one
+              belief: humans have unlimited capacity{" "}
+              <br className="hidden md:block" /> to become whatever they set
+              their minds to.
             </p>
             <p className="text-secondary pt-2 text-xs md:text-lg">
-              I consider myself an impact-driven solution provider, inspired by
-              the <br className="hidden md:block" /> mission of adding value to
-              humanity. With a multidisciplinary background{" "}
-              <br className="hidden md:block" /> that blends engineering
-              principles, system design, data science, software{" "}
-              <br className="hidden md:block" /> and web development, digital
-              marketing, content creation and hands-on <br /> hospital
-              experience.
+              My work spans four domains — Healthcare (clinical informatics, EHR,{" "}
+              <br className="hidden md:block" /> medical devices), Finance
+              (financial engineering, algorithmic trading),{" "}
+              <br className="hidden md:block" /> Technology (blockchain, smart
+              contracts, AI & data science), and{" "}
+              <br className="hidden md:block" /> Media (cinematography, content
+              production, digital marketing).
             </p>
             <p className="text-secondary pt-2 text-xs md:text-lg">
-              Let’s connect if you're building bold ideas and need a strategic
-              partner <br className="hidden md:block" /> who can engineer them
-              into reality.
+              Let’s connect if you’re building something bold — I’m a strategic{" "}
+              <br className="hidden md:block" /> partner who can engineer ideas
+              into reality across any of these worlds.
             </p>
           </div>
           {isExpanded && (
             <div className="md:hidden">
               <p className="text-secondary pt-2 text-xs md:text-lg">
-                My interests lie at the intersection of clinical and health
-                informatics, <br className="hidden md:block" /> electronic
-                health records (EHR), artificial intelligence (AI) for medicine,
-                and <br className="hidden md:block" /> blockchain applications
-                for health data systems. I believe the future of{" "}
-                <br className="hidden md:block" /> healthcare depends on secure
-                data, intelligent systems, and technologies{" "}
-                <br className="hidden md:block" /> that improve efficiency,
-                accuracy, and patient outcomes.
+                I hold a B.Eng in Biomedical Engineering from the University of
+                Ilorin and I’m currently pursuing an MSc in Financial
+                Engineering at WorldQuant University. I’m also a blockchain
+                developer, algorithmic trader, and media creator — unified by
+                one belief: humans have unlimited capacity to become whatever
+                they set their minds to.
               </p>
               <p className="text-secondary pt-2 text-xs md:text-lg">
-                I consider myself an impact-driven solution provider, inspired
-                by the <br className="hidden md:block" /> mission of adding
-                value to humanity. With a multidisciplinary background{" "}
-                <br className="hidden md:block" /> that blends engineering
-                principles, system design, data science, software{" "}
-                <br className="hidden md:block" /> and web development, digital
-                marketing, content creation and hands-on <br /> hospital
-                experience.
+                My work spans four domains — Healthcare (clinical informatics,
+                EHR, medical devices), Finance (financial engineering,
+                algorithmic trading), Technology (blockchain, smart contracts,
+                AI & data science), and Media (cinematography, content
+                production, digital marketing).
               </p>
               <p className="text-secondary pt-2 text-xs md:text-lg">
-                Let’s connect if you're building bold ideas and need a strategic
-                partner <br className="hidden md:block" /> who can engineer them
-                into reality.
+                Let’s connect if you’re building something bold — I’m a
+                strategic partner who can engineer ideas into reality across any
+                of these worlds.
               </p>
               <button
                 onClick={() => setIsExpanded(false)}

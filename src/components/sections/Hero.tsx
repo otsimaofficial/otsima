@@ -20,6 +20,7 @@ const Hero = () => {
       ease: "power2.out",
     })
       .from(".hero-desc", { opacity: 0, y: 20, duration: 0.8 }, "-=0.5")
+      .from(".hero-pills", { opacity: 0, y: 10, duration: 0.6 }, "-=0.4")
       .from(".hero-buttons", { opacity: 0, y: 15, duration: 0.6 }, "-=0.3")
       .from(".hero-img", { opacity: 0, x: 50, duration: 0.8 }, "-=0.3");
   }, []);
@@ -28,15 +29,24 @@ const Hero = () => {
     <section className="hero-section flex flex-col-reverse md:flex-row items-center justify-center bg-tetiary md:gap-50 md:mt-40 md:mx-30 p-5 md:p-10 ">
       <div className="space-y-5 md:space-y-10">
         <h1 className="hero-title font-bold text-3xl md:text-5xl text-center md:text-left text-primary mt-5 md:mt-0">
-          Engineering Digital <br className="hidden md:block" /> Health Systems
-          for the <br className="hidden md:block" /> Future
+          Engineer. Investor. <br className="hidden md:block" /> Creator.
         </h1>
         <p className="hero-desc text-secondary text-center md:text-left">
-          Biomedical Engineer specializing in Clinical Informatics,
-          <br className="hidden md:block" /> Predictive Health Systems, and
-          Blockchain solutions
-          <br className="hidden md:block" /> for secure healthcare data.
+          Biomedical & Financial Engineer, Blockchain Developer,
+          <br className="hidden md:block" /> and Media Creator — building at the
+          <br className="hidden md:block" /> intersection of Health, Finance,
+          <br className="hidden md:block" /> Technology & Media.
         </p>
+        <div className="hero-pills flex flex-wrap gap-2 justify-center md:justify-start">
+          {["Healthcare", "Finance", "Technology", "Media"].map((domain) => (
+            <span
+              key={domain}
+              className="text-xs font-medium text-primary border border-primary px-3 py-1 rounded-full"
+            >
+              {domain}
+            </span>
+          ))}
+        </div>
         <div className="hero-buttons space-x-5 ml-5 md:ml-0">
           <a
             href="https://drive.google.com/drive/folders/1OPFDojxjGf-dZ4bi9_3WcCVL7d8Wjkgf?usp=sharing"

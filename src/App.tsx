@@ -4,7 +4,8 @@ import Experience from "./pages/Experience.tsx";
 import Certificates from "./pages/Certificates.tsx";
 import Projects from "./pages/Projects.tsx";
 import Events from "./pages/Events.tsx";
-import PageLayout from "./pages/PageLayout.tsx";
+import Blog from "./pages/Blog.tsx";
+import PageLayout from "./components/layout/PageLayout.tsx";
 import gsap from 'gsap'
 import {ScrollTrigger, SplitText} from 'gsap/all'
 
@@ -20,6 +21,7 @@ const App = () => {
                     <Route  path="/certificates" element={<Certificates/>} />
                     <Route  path="/projects" element={<Projects/>} />
                     <Route  path="/events" element={<Events/>} />
+                    <Route  path="/blog" element={<Blog/>} />
                 </Route>
             </Routes>
         </main>
