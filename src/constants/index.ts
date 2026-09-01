@@ -34,6 +34,16 @@ export const certificationLinks = [
     title: "Occupational and Environmental Safety, Security and Health Course",
     desc: "World Safety Organization",
   },
+  {
+    pic: "/certification/cer6.png",
+    title: "Foundations of Financial Engineering",
+    desc: "WorldQuant University",
+  },
+  {
+    pic: "/certification/cer7.png",
+    title: "Applied Data Science Lab",
+    desc: "WorldQuant University",
+  },
 ];
 
 export const projectData = [
