@@ -218,7 +218,7 @@ const Blog = () => {
                 ))}
               </ul>
               <p className="text-xs text-gray-400 mt-6 italic">
-                {error ? "Latest articles are on Medium — check back shortly." : "Articles coming soon"}
+                {error ? "Latest articles are on Medium; check back shortly." : "Articles coming soon"}
               </p>
             </div>
           ))}

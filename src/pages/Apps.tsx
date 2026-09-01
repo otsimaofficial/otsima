@@ -93,7 +93,7 @@ const Apps = () => {
               ))}
             </ul>
             <p className="text-xs text-gray-400 mt-6 italic">
-              In development — first app launching soon
+              In development; first app launching soon
             </p>
           </div>
         ))}

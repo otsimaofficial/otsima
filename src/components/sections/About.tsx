@@ -50,7 +50,7 @@ const About = () => {
         <div className="about-text">
           <h2 className="text-primary text-3xl font-bold ">About Me</h2>
           <p className="text-secondary pt-2 text-xs md:text-lg">
-            Hello, I’m Emmanuel Otsima Ogbu — a proudly Nigerian Christian and
+            Hello, I’m Emmanuel Otsima Ogbu, a proudly Nigerian Christian and
             multidisciplinary engineer building at the intersection of
             Health, Finance, Technology & Media.
           </p>
@@ -67,19 +67,20 @@ const About = () => {
               I hold a B.Eng in Biomedical Engineering from the University of
               Ilorin and I’m currently pursuing an MSc in Financial
               Engineering at WorldQuant University. I’m also a blockchain
-              developer, algorithmic trader, and media creator — unified by
-              one belief: humans have unlimited capacity to become whatever
-              they set their minds to.
+              developer, algorithmic trader, and media creator. I believe
+              that humans have unlimited capacity to become whatever they set
+              their minds to and the greatest minds of them is yet to
+              maximise he/her capacity.
             </p>
             <p className="text-secondary pt-2 text-xs md:text-lg">
-              My work spans four domains — Healthcare (clinical informatics,
+              My work spans four domains: Healthcare (clinical informatics,
               EHR, medical devices), Finance (financial engineering,
               algorithmic trading), Technology (blockchain, smart contracts,
               AI & data science), and Media (cinematography, content
               production, digital marketing).
             </p>
             <p className="text-secondary pt-2 text-xs md:text-lg">
-              Let’s connect if you’re building something bold — I’m a
+              Let’s connect if you’re building something bold; I’m a
               strategic partner who can engineer ideas into reality across any
               of these worlds.
             </p>
@@ -90,19 +91,20 @@ const About = () => {
                 I hold a B.Eng in Biomedical Engineering from the University of
                 Ilorin and I’m currently pursuing an MSc in Financial
                 Engineering at WorldQuant University. I’m also a blockchain
-                developer, algorithmic trader, and media creator — unified by
-                one belief: humans have unlimited capacity to become whatever
-                they set their minds to.
+                developer, algorithmic trader, and media creator. I believe
+                that humans have unlimited capacity to become whatever they
+                set their minds to and the greatest minds of them is yet to
+                maximise he/her capacity.
               </p>
               <p className="text-secondary pt-2 text-xs md:text-lg">
-                My work spans four domains — Healthcare (clinical informatics,
+                My work spans four domains: Healthcare (clinical informatics,
                 EHR, medical devices), Finance (financial engineering,
                 algorithmic trading), Technology (blockchain, smart contracts,
                 AI & data science), and Media (cinematography, content
                 production, digital marketing).
               </p>
               <p className="text-secondary pt-2 text-xs md:text-lg">
-                Let’s connect if you’re building something bold — I’m a
+                Let’s connect if you’re building something bold; I’m a
                 strategic partner who can engineer ideas into reality across any
                 of these worlds.
               </p>

@@ -33,7 +33,7 @@ const Hero = () => {
         </h1>
         <p className="hero-desc text-secondary text-center md:text-left">
           Biomedical & Financial Engineer, Blockchain Developer,
-          <br className="hidden md:block" /> and Media Creator — building at the
+          <br className="hidden md:block" /> and Media Creator, building at the
           <br className="hidden md:block" /> intersection of Health, Finance,
           <br className="hidden md:block" /> Technology & Media.
         </p>
