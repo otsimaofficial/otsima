@@ -29,13 +29,10 @@ const Hero = () => {
     <section className="hero-section flex flex-col-reverse md:flex-row items-center md:items-stretch justify-center bg-tetiary md:gap-50 md:mt-40 md:mx-30 p-5 md:p-10 ">
       <div className="space-y-5 md:space-y-0 md:flex md:flex-col md:justify-between">
         <h1 className="hero-title font-bold text-3xl md:text-5xl text-center md:text-left text-primary mt-5 md:mt-0">
-          Engineer. Investor. <br className="hidden md:block" /> Creator.
+          Emmanuel <br className="hidden md:block" /> Otsima Ogbu
         </h1>
         <p className="hero-desc text-secondary text-center md:text-left">
-          Biomedical & Financial Engineer, Blockchain Developer,
-          <br className="hidden md:block" /> and Media Creator, building at the
-          <br className="hidden md:block" /> intersection of Health, Finance,
-          <br className="hidden md:block" /> Technology & Media.
+          Learning to engineer capital for Africa’s untapped potential
         </p>
         <div className="hero-pills flex flex-wrap gap-2 justify-center md:justify-start">
           {["Healthcare", "Finance", "Technology", "Media"].map((domain) => (
