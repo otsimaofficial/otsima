@@ -26,8 +26,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero-section flex flex-col-reverse md:flex-row items-center justify-center bg-tetiary md:gap-50 md:mt-40 md:mx-30 p-5 md:p-10 ">
-      <div className="space-y-5 md:space-y-10">
+    <section className="hero-section flex flex-col-reverse md:flex-row items-center md:items-stretch justify-center bg-tetiary md:gap-50 md:mt-40 md:mx-30 p-5 md:p-10 ">
+      <div className="space-y-5 md:space-y-0 md:flex md:flex-col md:justify-between">
         <h1 className="hero-title font-bold text-3xl md:text-5xl text-center md:text-left text-primary mt-5 md:mt-0">
           Engineer. Investor. <br className="hidden md:block" /> Creator.
         </h1>
