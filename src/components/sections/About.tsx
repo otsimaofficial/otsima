@@ -66,11 +66,10 @@ const About = () => {
             <p className="text-secondary pt-2 text-xs md:text-lg">
               I hold a B.Eng in Biomedical Engineering from the University of
               Ilorin and I’m currently pursuing an MSc in Financial
-              Engineering at WorldQuant University. I’m also a blockchain
-              developer, algorithmic trader, and media creator. I believe
-              that humans have unlimited capacity to become whatever they set
-              their minds to and the greatest minds of them is yet to
-              maximise he/her capacity.
+              Engineering at WorldQuant University. I believe that humans
+              have unlimited capacity to become whatever they set their
+              minds to and the greatest minds of them is yet to maximise
+              he/her capacity.
             </p>
             <p className="text-secondary pt-2 text-xs md:text-lg">
               My work spans four domains: Healthcare (clinical informatics,
@@ -90,11 +89,10 @@ const About = () => {
               <p className="text-secondary pt-2 text-xs md:text-lg">
                 I hold a B.Eng in Biomedical Engineering from the University of
                 Ilorin and I’m currently pursuing an MSc in Financial
-                Engineering at WorldQuant University. I’m also a blockchain
-                developer, algorithmic trader, and media creator. I believe
-                that humans have unlimited capacity to become whatever they
-                set their minds to and the greatest minds of them is yet to
-                maximise he/her capacity.
+                Engineering at WorldQuant University. I believe that humans
+                have unlimited capacity to become whatever they set their
+                minds to and the greatest minds of them is yet to maximise
+                he/her capacity.
               </p>
               <p className="text-secondary pt-2 text-xs md:text-lg">
                 My work spans four domains: Healthcare (clinical informatics,
