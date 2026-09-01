@@ -43,7 +43,7 @@ const About = () => {
     <section className="about-section bg-tetiary md:gap-50 my-5 md:my-10 md:mx-30 p-4 md:p-14">
       <div className="flex  justify-left gap-5 md:gap-40">
         <img
-          src="/about.png"
+          src="/home/about.png"
           alt="AboutImg"
           className="about-img w-45 h-80 md:w-85 md:h-150 hidden md:block"
         />
