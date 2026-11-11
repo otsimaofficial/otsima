@@ -31,9 +31,9 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-black/30" />
       <div className="relative z-10 h-full flex flex-col gap-4 md:gap-5 items-center md:items-start justify-start md:justify-center p-6 md:p-12">
-        <h1 className="hero-title font-bold text-white whitespace-nowrap text-[clamp(1.25rem,6vw,2.4rem)] md:text-[clamp(1.75rem,3.6vw,4rem)] leading-tight tracking-tight">
+        <h1 className="hero-title font-bold text-white whitespace-nowrap text-[clamp(1rem,4.7vw,2rem)] md:text-[clamp(1.5rem,2.9vw,3.4rem)] leading-tight tracking-tight">
           <span className="font-['Noto_Serif_Display',serif] font-medium">£</span>
-          mmanuel Otsima Ogbu
+          <span className="uppercase font-extrabold">mmanuel Otsima Ogbu</span>
         </h1>
         <div className="hero-pills flex flex-wrap gap-2 justify-center md:justify-start">
           {["Healthcare", "Finance", "Technology", "Media"].map((domain) => (
