@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { FaGithub } from "react-icons/fa";
+import { appData } from "../constants";
 
 const pillars = [
   {
@@ -69,7 +70,32 @@ const Apps = () => {
         </a>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mt-10">
+      <div className="apps-pillar grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 mt-10">
+        {appData.map((a) => (
+          <a
+            key={a.name}
+            href={a.url}
+            className="group block bg-tetiary rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            <img
+              src={a.image}
+              alt={a.name}
+              className="w-full aspect-[16/10] object-cover object-top"
+            />
+            <div className="p-5 space-y-2">
+              <p className="font-bold text-primary text-xl group-hover:underline">
+                {a.name}
+              </p>
+              <p className="text-secondary text-sm">{a.description}</p>
+              <p className="text-primary text-sm font-medium">
+                {a.displayUrl}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mt-6">
         {pillars.map((pillar) => (
           <div
             key={pillar.domain}
@@ -93,7 +119,7 @@ const Apps = () => {
               ))}
             </ul>
             <p className="text-xs text-gray-400 mt-6 italic">
-              In development; first app launching soon
+              More in development
             </p>
           </div>
         ))}

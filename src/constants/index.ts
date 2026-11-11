@@ -161,3 +161,36 @@ export const eventPics = [
   { pic: "/events/event3.png" },
   { pic: "/events/event4.png" },
 ];
+
+export const websiteProjects = [
+  {
+    name: "El Kavod Media",
+    url: "https://elkavodmedia.com/",
+    image: "/websites/elkavod.jpg",
+    kind: "Client website",
+  },
+  {
+    name: "The Media Bro",
+    url: "https://themediabro.com/",
+    image: "/websites/themediabro.jpg",
+    kind: "Client website",
+  },
+  {
+    name: "Light Waters Marine",
+    url: "https://lightwatersmarine.com/",
+    image: "/websites/lightwaters.jpg",
+    kind: "Client website",
+  },
+];
+
+export const appData = [
+  {
+    name: "Naira Lens",
+    // Served from this domain (proxied to Vercel) via rewrites in vercel.json
+    url: "/naira-lens/",
+    displayUrl: "otsima.dev/naira-lens",
+    image: "/websites/nairalens.jpg",
+    description:
+      "Nigerian markets and macro research: live CBN data, MPC rate-decision odds, bank capital stress tests and a free weekly report.",
+  },
+];

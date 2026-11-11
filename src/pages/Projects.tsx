@@ -1,4 +1,4 @@
-import { projectData } from "../constants";
+import { projectData, websiteProjects } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef, useState } from "react";
@@ -35,7 +35,39 @@ const Projects = () => {
           engineering, data, and decentralized systems.
         </p>
       </div>
-      <div className="bg-tetiary p-6 md:p-12 lg:p-16 md:mt-24 md:mb-20">
+      <div className="project-item md:mt-16 space-y-6">
+        <h3 className="text-primary text-3xl font-bold">Website projects</h3>
+        <p className="text-[#111827] md:text-lg">
+          Websites I designed and developed (front end and back end) for
+          clients.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {websiteProjects.map((w) => (
+            <a
+              key={w.url}
+              href={w.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-tetiary rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <img
+                src={w.image}
+                alt={w.name}
+                className="w-full aspect-[16/10] object-cover object-top"
+              />
+              <div className="p-5">
+                <p className="font-bold text-primary text-xl group-hover:underline">
+                  {w.name}
+                </p>
+                <p className="text-secondary text-sm">
+                  {w.kind} · {new URL(w.url).hostname}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+      <div className="bg-tetiary p-6 md:p-12 lg:p-16 md:mt-16 md:mb-20">
         {projectData.map((project, i) => (
           <div key={i} className="project-item mb-12 last:mb-0">
             {/* Header: Stacks on mobile, Row on Desktop */}
