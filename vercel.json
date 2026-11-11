@@ -3,7 +3,8 @@
     { "source": "/naira-lens", "destination": "/naira-lens/", "permanent": false }
   ],
   "rewrites": [
-    { "source": "/naira-lens/:path*", "destination": "https://naira-lens-flax.vercel.app/:path*" },
+    { "source": "/naira-lens/", "destination": "https://naira-lens-flax.vercel.app/index.html" },
+    { "source": "/naira-lens/:path+", "destination": "https://naira-lens-flax.vercel.app/:path+" },
     { "source": "/api/subscribe", "destination": "https://naira-lens-flax.vercel.app/api/subscribe" },
     { "source": "/(.*)", "destination": "/" }
   ]
