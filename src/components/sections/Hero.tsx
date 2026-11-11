@@ -1,4 +1,3 @@
-import Button from "../ui/Button.tsx";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
@@ -20,53 +19,34 @@ const Hero = () => {
       ease: "power2.out",
     })
       .from(".hero-desc", { opacity: 0, y: 20, duration: 0.8 }, "-=0.5")
-      .from(".hero-pills", { opacity: 0, y: 10, duration: 0.6 }, "-=0.4")
-      .from(".hero-buttons", { opacity: 0, y: 15, duration: 0.6 }, "-=0.3")
-      .from(".hero-img", { opacity: 0, x: 50, duration: 0.8 }, "-=0.3");
+      .from(".hero-pills", { opacity: 0, y: 10, duration: 0.6 }, "-=0.4");
   }, []);
 
   return (
-    <section className="hero-section flex flex-col-reverse md:flex-row items-center md:items-stretch justify-center bg-tetiary md:gap-50 md:mt-40 md:mx-30 p-5 md:p-10 ">
-      <div className="space-y-5 md:space-y-0 md:flex md:flex-col md:justify-between">
-        <h1 className="hero-title font-bold text-3xl md:text-5xl text-center md:text-left text-primary mt-5 md:mt-0">
-          Emmanuel <br className="hidden md:block" /> Otsima Ogbu
+    <section
+      className="hero-section relative overflow-hidden rounded-2xl bg-neutral-700 bg-cover bg-[position:72%_bottom] md:bg-center min-h-[30rem] md:min-h-[32rem] mx-4 mt-16 md:mt-32 md:mx-30 p-6 md:p-14 flex flex-col justify-start md:justify-center"
+      style={{ backgroundImage: "url('/home/hero-banner.jpg')" }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-black/75 via-black/40 to-transparent" />
+      <div className="relative z-10 flex flex-col gap-6 md:gap-8 items-center md:items-start">
+        <h1 className="hero-title font-bold text-white whitespace-nowrap text-[clamp(1.25rem,6vw,2.4rem)] md:text-6xl leading-tight tracking-tight">
+          <span className="font-['Playfair_Display_SC',serif] font-bold">£</span>
+          mmanuel Otsima Ogbu
         </h1>
-        <p className="hero-desc text-secondary text-center md:text-left">
+        <p className="hero-desc text-white/80 text-center md:text-left max-w-md">
           Learning to engineer capital for Africa’s untapped potential
         </p>
         <div className="hero-pills flex flex-wrap gap-2 justify-center md:justify-start">
           {["Healthcare", "Finance", "Technology", "Media"].map((domain) => (
             <span
               key={domain}
-              className="text-xs font-medium text-primary border border-primary px-3 py-1 rounded-full"
+              className="text-xs font-medium text-white border border-white/70 px-3 py-1 rounded-full backdrop-blur-sm"
             >
               {domain}
             </span>
           ))}
         </div>
-        <div className="hero-buttons space-x-5 ml-5 md:ml-0">
-          <a
-            href="https://drive.google.com/drive/folders/1OPFDojxjGf-dZ4bi9_3WcCVL7d8Wjkgf?usp=sharing"
-            target="_blank"
-          >
-            <Button
-              title="View My CV"
-              containerClass="bg-primary text-white hover:scale-105 cursor-pointer hover:bg-blue-900 "
-            />
-          </a>
-          <a href="mailto:emmanuelotsimaogbu@gmail.com" target="_blank">
-            <Button
-              title="Contact Me"
-              containerClass="hover:scale-105 cursor-pointer hover:bg-primary hover:text-white "
-            />
-          </a>
-        </div>
       </div>
-      <img
-        src="/home/Hero.png"
-        alt="HeroImg"
-        className="hero-img md:h-100 rounded-lg"
-      />
     </section>
   );
 };

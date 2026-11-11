@@ -56,12 +56,23 @@ const Navbar = () => {
               </a>
             ))}
           </nav>
-          <a href="mailto:emmanuelotsimaogbu@gmail.com" target="_blank">
-            <Button
-              title="Contact Me"
-              containerClass="hover:bg-primary hover:text-white hover:cursor-pointer hover:scale-105"
-            />
-          </a>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://drive.google.com/drive/folders/1OPFDojxjGf-dZ4bi9_3WcCVL7d8Wjkgf?usp=sharing"
+              target="_blank"
+            >
+              <Button
+                title="View My CV"
+                containerClass="bg-primary text-white hover:cursor-pointer hover:scale-105 hover:bg-blue-900"
+              />
+            </a>
+            <a href="mailto:emmanuelotsimaogbu@gmail.com" target="_blank">
+              <Button
+                title="Contact Me"
+                containerClass="hover:bg-primary hover:text-white hover:cursor-pointer hover:scale-105"
+              />
+            </a>
+          </div>
         </div>
         <div className=" md:hidden flex justify-end pr-6 bg-tetiary ">
           <CgMenuRight
@@ -96,6 +107,13 @@ const Navbar = () => {
               {item.label}
             </a>
           ))}
+          <a
+            href="https://drive.google.com/drive/folders/1OPFDojxjGf-dZ4bi9_3WcCVL7d8Wjkgf?usp=sharing"
+            target="_blank"
+            className="text-2xl hover:scale-105 transition-transform"
+          >
+            View My CV
+          </a>
           <a href="mailto:emmanuelotsimaogbu@gmail.com" target="_blank">
             <div className="mt-4">
               <Button
